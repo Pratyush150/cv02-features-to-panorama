@@ -1,0 +1,29 @@
+# The eight figures in docs/figures/ ARE committed on purpose: they are the
+# figures the README shows, and a teaching repo whose pictures only exist after
+# you run it teaches nobody who is reading it on GitHub. Everything below is
+# genuinely regenerated.
+*.png
+!docs/figures/*.png
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.venv/
+venv/
+env/
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store

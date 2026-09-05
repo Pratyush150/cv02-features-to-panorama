@@ -1,0 +1,12 @@
+# Pinned, and the pin matters. OpenCV 5 renamed features2d and folded learned
+# detectors (ALIKED, DISK, LightGlueMatcher) into the base wheel; nothing in
+# this repository breaks there, but the printed numbers are from 4.14 and the
+# point of a teaching repo is that its numbers reproduce.
+#
+# Do NOT also install plain `opencv-python`. Both wheels install side by side at
+# different major versions and `import cv2` silently resolves to one of them
+# with no warning -- which is bug shape 5 in examples/06, met in the wild.
+opencv-contrib-python==4.14.0.94
+numpy>=1.24
+matplotlib>=3.6
+pytest>=7.0

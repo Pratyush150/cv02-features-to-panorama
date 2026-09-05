@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "feat"
+version = "1.0.0"
+description = "Corners, descriptors, matching, RANSAC and a panorama, built from scratch and checked against OpenCV"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Pratyush Vatsa" }]
+dependencies = [
+    "opencv-contrib-python==4.14.0.94",
+    "numpy>=1.24",
+    "matplotlib>=3.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+# src/ on the path, so `pytest` works in a fresh clone with nothing installed
+# and no PYTHONPATH incantation. The examples use examples/_bootstrap.py for
+# the same reason by a different mechanism -- pytest's pythonpath option does
+# not apply to scripts run directly.
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
